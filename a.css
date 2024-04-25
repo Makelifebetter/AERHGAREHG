@@ -60,12 +60,19 @@
     color: aliceblue;
 }
 
-.bar {
-    height: 3px;
-    width: 80%;
-    background-color: aliceblue;
-    border-radius: 10px;
+/* home section */
+.home {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
 }
+
+.big-word h1 {
+    font-size: 30 rem;
+    color: aliceblue;
+    text-align: center;
+}
+
 
 @media (max-width: 768px) {
     .nav__toggle{
