@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="a.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script src="aaa.js"></script>
@@ -17,11 +21,7 @@
     body {
         background-color: black;
     }
-    /* img {
-        img-fluid
-        max-width: 100%;
-        height: auto;
-    } */
+    
 </style>
 <body>
     <!-- 大於576(sm)才會啟動 大於768(md)才會啟動 大於992(lg)才會啟動 大於1200(xl)才會啟動 大於1400(xxl)才會啟動-->
@@ -37,20 +37,55 @@
          </div>
         <div class="nav__menu">
             <ul>
-                <li class="nav__item">Home</li>
-                <li class="nav__item">About</li>
-                <li class="nav__item">Cantact</li>
-                <li class="nav__item">Faq</li>
+                <li class="nav__item">
+                    <a href="#">知識專欄</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#">免費秘笈</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#">關於Hosanna</a>
+                </li>
+                <!-- <li class="nav__item">Faq</li> -->
+                <!-- <li><i class="fa-brands fa-instagram"></i></li> -->
                 <i class="fa-solid fa-xmark close"></i>
             </ul>
         </div>
     </div>
+    <div class="shadow" class="shadow">
+        <div class="email">
+            <h1>領取轉職密集</h1>
+            <h5>領取轉職密集，逆轉公司逆轉人生沒有朵隨便打的</h5>
+            <h5>領取轉職密集，逆轉公司逆轉人生沒有朵隨</h5>
+            <h6>輸入Email 馬上獲取轉職秘笈!</h6>
+            <input type="text" id="email_input" name="fname">
+            <i onclick="closeEmailForm()" class="fa-solid fa-xmark shadowXmark "></i>
+            <button class="submitEmail" role="button">Button 29</button>
+        </div>
+    </div>
     <main class="main">
         <section class="home section">
-            <div class="big-word">
-                <h1>Get your Life Better <br>By Using AILifer</h1>
+            <div class="word">
+                <div class="big-word">
+                    <h1>掌握 AI 成就不凡</h1>
+                    <h1>讓每一個決定更精準</h1>
+                    <h1>相信 你就會看見</h1>
+                </div>
+                <button onclick="showEmailForm()" class="blub">點選立即領取秘笈</button>
             </div>
+            <img class= "bg-cover" src="image/rob.png" alt="">
         </section>
     </main>
+    <script>
+        function showEmailForm(){
+            const emailShadow = document.querySelector(".shadow")
+            emailShadow.style.display = 'flex' 
+        }
+        function closeEmailForm() {
+            const emailShadow = document.querySelector(".shadow")
+            const closeShadow = document.querySelector(".shadowXmark")
+            emailShadow.style.display = 'none' 
+        }
+    </script>
 </body>
 </html>
